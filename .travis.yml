@@ -1,0 +1,9 @@
+language: csharp
+solution: ADN.Drawing.sln
+mono: latest
+dotnet: 2.0.0
+script:
+  - dotnet restore
+  - dotnet build ./src/ADN.Drawing/
+  - dotnet build ./tests/ADN.Drawing.Tests/
+  - dotnet test ./tests/ADN.Drawing.Tests/

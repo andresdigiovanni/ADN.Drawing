@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADN.Drawing", "src\ADN.Drawing\ADN.Drawing.csproj", "{55BA7F64-D78D-4FA5-AFA0-1FF9AA54E7D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADN.Drawing.Tests", "tests\ADN.Drawing.Tests\ADN.Drawing.Tests.csproj", "{13F48583-CEFB-45B3-890E-57D30D38B7D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7309001B-CC65-4591-B175-B885CF97D813}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C0449429-3C95-4CBD-BCF8-DC72E232F370}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55BA7F64-D78D-4FA5-AFA0-1FF9AA54E7D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55BA7F64-D78D-4FA5-AFA0-1FF9AA54E7D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55BA7F64-D78D-4FA5-AFA0-1FF9AA54E7D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55BA7F64-D78D-4FA5-AFA0-1FF9AA54E7D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13F48583-CEFB-45B3-890E-57D30D38B7D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13F48583-CEFB-45B3-890E-57D30D38B7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13F48583-CEFB-45B3-890E-57D30D38B7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13F48583-CEFB-45B3-890E-57D30D38B7D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55BA7F64-D78D-4FA5-AFA0-1FF9AA54E7D1} = {7309001B-CC65-4591-B175-B885CF97D813}
+		{13F48583-CEFB-45B3-890E-57D30D38B7D8} = {C0449429-3C95-4CBD-BCF8-DC72E232F370}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60CAD277-3285-492D-825D-1C2059495E32}
+	EndGlobalSection
+EndGlobal
