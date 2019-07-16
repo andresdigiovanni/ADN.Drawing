@@ -1,105 +1,137 @@
-<a name='assembly'></a>
 # ADN.Drawing
 
-## Contents
+# Content
 
-- [BitmapExtensions](#T-ADN-Drawing-BitmapExtensions 'ADN.Drawing.BitmapExtensions')
-  - [Resize(bitmap,width,height,pixelFormat)](#M-ADN-Drawing-BitmapExtensions-Resize-System-Drawing-Bitmap,System-Int32,System-Int32,System-Drawing-Imaging-PixelFormat- 'ADN.Drawing.BitmapExtensions.Resize(System.Drawing.Bitmap,System.Int32,System.Int32,System.Drawing.Imaging.PixelFormat)')
-  - [ResizeCanvas(bitmap,width,height,pixelFormat)](#M-ADN-Drawing-BitmapExtensions-ResizeCanvas-System-Drawing-Bitmap,System-Int32,System-Int32,System-Drawing-Imaging-PixelFormat- 'ADN.Drawing.BitmapExtensions.ResizeCanvas(System.Drawing.Bitmap,System.Int32,System.Int32,System.Drawing.Imaging.PixelFormat)')
-  - [SetBackgroundColor(bitmap,color,pixelFormat)](#M-ADN-Drawing-BitmapExtensions-SetBackgroundColor-System-Drawing-Bitmap,System-Drawing-Color,System-Drawing-Imaging-PixelFormat- 'ADN.Drawing.BitmapExtensions.SetBackgroundColor(System.Drawing.Bitmap,System.Drawing.Color,System.Drawing.Imaging.PixelFormat)')
+- [BitmapExtensions](#T:ADN.Drawing.BitmapExtensions)
 
-<a name='T-ADN-Drawing-BitmapExtensions'></a>
-## BitmapExtensions `type`
+  - [Resize(bitmap, width, height, pixelFormat)](#BitmapExtensions.Resize(bitmap,width,height,pixelFormat))
 
-##### Namespace
+  - [ResizeCanvas(bitmap, width, height, pixelFormat)](#BitmapExtensions.ResizeCanvas(bitmap,width,height,pixelFormat))
 
-ADN.Drawing
+  - [SetBackgroundColor(bitmap, color, pixelFormat)](#BitmapExtensions.SetBackgroundColor(bitmap,color,pixelFormat))
 
-##### Summary
+<a name='T:ADN.Drawing.BitmapExtensions'></a>
 
-A static class of extension methods for [Bitmap](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Drawing.Bitmap 'System.Drawing.Bitmap').
 
-<a name='M-ADN-Drawing-BitmapExtensions-Resize-System-Drawing-Bitmap,System-Int32,System-Int32,System-Drawing-Imaging-PixelFormat-'></a>
-### Resize(bitmap,width,height,pixelFormat) `method`
+## BitmapExtensions
 
-##### Summary
+A static class of extension methods for .
+
+<a name='BitmapExtensions.Resize(bitmap,width,height,pixelFormat)'></a>
+
+
+### Resize(bitmap, width, height, pixelFormat)
 
 Resize a Bitmap.
 
-##### Returns
+
+#### Parameters
+
+| Name | Description |
+| ---- | ----------- |
+| bitmap | *System.Drawing.Bitmap*<br>Bitmap to resize. |
+
+#### Parameters
+
+| width | *System.Int32*<br>New width. |
+
+#### Parameters
+
+| height | *System.Int32*<br>New height. |
+
+#### Parameters
+
+| pixelFormat | *System.Drawing.Imaging.PixelFormat*<br>Specifies the format of the color data for each pixel in the image. |
+
+
+#### Returns
 
 Resized bitmap.
 
-##### Parameters
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| bitmap | [System.Drawing.Bitmap](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Drawing.Bitmap 'System.Drawing.Bitmap') | Bitmap to resize. |
-| width | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | New width. |
-| height | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | New height. |
-| pixelFormat | [System.Drawing.Imaging.PixelFormat](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Drawing.Imaging.PixelFormat 'System.Drawing.Imaging.PixelFormat') | Specifies the format of the color data for each pixel in the image. |
-
-##### Example
+#### Example
 
 ```csharp
 var originalBitmap = (Bitmap)Bitmap.FromFile("polar-bear.png");
 int width = 320;
 int height = 180;
-var resizedBitmap = originalBitmap.Resize(width, height); 
+var resizedBitmap = originalBitmap.Resize(width, height);
 ```
 
-<a name='M-ADN-Drawing-BitmapExtensions-ResizeCanvas-System-Drawing-Bitmap,System-Int32,System-Int32,System-Drawing-Imaging-PixelFormat-'></a>
-### ResizeCanvas(bitmap,width,height,pixelFormat) `method`
+<a name='BitmapExtensions.ResizeCanvas(bitmap,width,height,pixelFormat)'></a>
 
-##### Summary
+
+### ResizeCanvas(bitmap, width, height, pixelFormat)
 
 Resize the canvas of a Bitmap.
 
-##### Returns
+
+#### Parameters
+
+| Name | Description |
+| ---- | ----------- |
+| bitmap | *System.Drawing.Bitmap*<br>Bitmap to resize. |
+
+#### Parameters
+
+| width | *System.Int32*<br>New width. |
+
+#### Parameters
+
+| height | *System.Int32*<br>New height. |
+
+#### Parameters
+
+| pixelFormat | *System.Drawing.Imaging.PixelFormat*<br>Specifies the format of the color data for each pixel in the image. |
+
+
+#### Returns
 
 Resized bitmap.
 
-##### Parameters
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| bitmap | [System.Drawing.Bitmap](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Drawing.Bitmap 'System.Drawing.Bitmap') | Bitmap to resize. |
-| width | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | New width. |
-| height | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | New height. |
-| pixelFormat | [System.Drawing.Imaging.PixelFormat](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Drawing.Imaging.PixelFormat 'System.Drawing.Imaging.PixelFormat') | Specifies the format of the color data for each pixel in the image. |
-
-##### Example
+#### Example
 
 ```csharp
 var originalBitmap = (Bitmap)Bitmap.FromFile("polar-bear.png");
 int width = 320;
 int height = 180;
-var resizedBitmap = originalBitmap.ResizeCanvas(width, height); 
+var resizedBitmap = originalBitmap.ResizeCanvas(width, height);
 ```
 
-<a name='M-ADN-Drawing-BitmapExtensions-SetBackgroundColor-System-Drawing-Bitmap,System-Drawing-Color,System-Drawing-Imaging-PixelFormat-'></a>
-### SetBackgroundColor(bitmap,color,pixelFormat) `method`
+<a name='BitmapExtensions.SetBackgroundColor(bitmap,color,pixelFormat)'></a>
 
-##### Summary
+
+### SetBackgroundColor(bitmap, color, pixelFormat)
 
 Set background of a Bitmap.
 
-##### Returns
+
+#### Parameters
+
+| Name | Description |
+| ---- | ----------- |
+| bitmap | *System.Drawing.Bitmap*<br>Bitmap to change background. |
+
+#### Parameters
+
+| color | *System.Drawing.Color*<br>Background color. |
+
+#### Parameters
+
+| pixelFormat | *System.Drawing.Imaging.PixelFormat*<br>Specifies the format of the color data for each pixel in the image. |
+
+
+#### Returns
 
 Bitmap with the background changed.
 
-##### Parameters
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| bitmap | [System.Drawing.Bitmap](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Drawing.Bitmap 'System.Drawing.Bitmap') | Bitmap to change background. |
-| color | [System.Drawing.Color](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Drawing.Color 'System.Drawing.Color') | Background color. |
-| pixelFormat | [System.Drawing.Imaging.PixelFormat](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Drawing.Imaging.PixelFormat 'System.Drawing.Imaging.PixelFormat') | Specifies the format of the color data for each pixel in the image. |
-
-##### Example
+#### Example
 
 ```csharp
 var originalBitmap = (Bitmap)Bitmap.FromFile("polar-bear.png");
 var backgroundColor = Color.FromName("yellow");
-var backgroundBitmap = originalBitmap.SetBackgroundColor(backgroundColor); 
+var backgroundBitmap = originalBitmap.SetBackgroundColor(backgroundColor);
 ```
+
