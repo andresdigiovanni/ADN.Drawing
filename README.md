@@ -1,6 +1,6 @@
 # Drawing Library for .NET
 
-ADN.Drawing is a cross-platform open-source library which provides drawing extensions to .NET developers.
+ADN.Drawing is a cross-platform open-source library which provides drawing utilities to .NET developers.
 
 [![Build Status](https://travis-ci.org/andresdigiovanni/ADN.Drawing.svg?branch=master)](https://travis-ci.org/andresdigiovanni/ADN.Drawing)
 [![NuGet](https://img.shields.io/nuget/v/ADN.Drawing.svg)](https://www.nuget.org/packages/ADN.Drawing/)
@@ -8,6 +8,22 @@ ADN.Drawing is a cross-platform open-source library which provides drawing exten
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=andresdigiovanni_ADN.Drawing&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=andresdigiovanni_ADN.Drawing)
 [![Quality](https://sonarcloud.io/api/project_badges/measure?project=andresdigiovanni_ADN.Drawing&metric=alert_status)](https://sonarcloud.io/dashboard?id=andresdigiovanni_ADN.Drawing)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Basic usage
+
+Example of set background color:
+
+Original bitmap:
+![Polar bear](resources/polar-bear-2.png)
+
+```csharp
+var originalBitmap = (Bitmap)Bitmap.FromFile("polar-bear.png");
+var backgroundColor = Color.FromName("yellow");
+var backgroundBitmap = originalBitmap.SetBackgroundColor(backgroundColor);
+```
+
+Background bitmap:
+![Polar bear yellow background](resources/polar-bear-2-yellow.png)
 
 ## Installation
 
