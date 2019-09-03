@@ -14,7 +14,7 @@ ADN.Drawing is a cross-platform open-source library which provides drawing utili
 Example of set background color:
 
 Original bitmap:
-
+<br/>
 ![Polar bear](resources/polar-bear-2.png)
 
 ```csharp
@@ -24,7 +24,7 @@ var backgroundBitmap = originalBitmap.SetBackgroundColor(backgroundColor);
 ```
 
 Background bitmap:
-
+<br/>
 ![Polar bear yellow background](resources/polar-bear-2-yellow.png)
 
 ## Installation
