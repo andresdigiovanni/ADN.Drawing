@@ -42,20 +42,6 @@ namespace ADN.Drawing.Tests
         }
 
         [Theory]
-        [InlineData("polar-bear-640-423.jpg", "polar-bear-resized-canvas-320x212.jpg", 320, 212)]
-        public void ResizeCanvas(string origImgFile, string expectedImgFile, int width, int height)
-        {
-            var origImg = (Bitmap)Bitmap.FromFile(Path.Combine("assets", origImgFile));
-            var expectedImg = (Bitmap)Bitmap.FromFile(Path.Combine("assets", expectedImgFile));
-            var expectedBytesImg = ImageToBytes(expectedImg, ImageFormat.Jpeg);
-
-            var resultImg = origImg.ResizeCanvas(width, height);
-            var resultBytesImg = ImageToBytes(resultImg, ImageFormat.Jpeg);
-
-            Assert.Equal(expectedBytesImg, resultBytesImg);
-        }
-
-        [Theory]
         [InlineData("polar-bear-2.png", "polar-bear-2-yellow.png", "yellow")]
         public void SetBackgroundColor(string origImgFile, string expectedImgFile, string colorName)
         {

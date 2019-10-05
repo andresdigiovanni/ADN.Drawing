@@ -66,32 +66,6 @@ namespace ADN.Drawing
         }
 
         /// <summary>
-        /// Resize the canvas of a Bitmap.
-        /// </summary>
-        /// <param name="bitmap">Bitmap to resize.</param>
-        /// <param name="width">New width.</param>
-        /// <param name="height">New height.</param>
-        /// <param name="pixelFormat">Specifies the format of the color data for each pixel in the image.</param>
-        /// <returns>Resized bitmap.</returns>
-        /// <example>
-        /// <code lang="csharp">
-        /// var originalBitmap = (Bitmap)Bitmap.FromFile("polar-bear.png");
-        /// int width = 320;
-        /// int height = 180;
-        /// var resizedBitmap = originalBitmap.ResizeCanvas(width, height);
-        /// </code>
-        /// </example>
-        public static Bitmap ResizeCanvas(this Bitmap bitmap, int width, int height, PixelFormat pixelFormat = PixelFormat.Format32bppRgb)
-        {
-            Bitmap temp = new Bitmap(width, height, pixelFormat);
-            temp.SetResolution(bitmap.HorizontalResolution, bitmap.VerticalResolution);
-            Graphics g = Graphics.FromImage(temp);
-            g.DrawImageUnscaled(bitmap, 0, 0, width, height);
-
-            return temp;
-        }
-
-        /// <summary>
         /// Set background of a Bitmap.
         /// </summary>
         /// <param name="source">Bitmap to change background.</param>
