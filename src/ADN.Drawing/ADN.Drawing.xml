@@ -46,6 +46,24 @@
             </code>
             </example>
         </member>
+        <member name="M:ADN.Drawing.BitmapExtensions.ResizeCanvas(System.Drawing.Bitmap,System.Int32,System.Int32,System.Drawing.Imaging.PixelFormat)">
+            <summary>
+            Resize the canvas of a Bitmap.
+            </summary>
+            <param name="bitmap">Bitmap to resize.</param>
+            <param name="width">New width.</param>
+            <param name="height">New height.</param>
+            <param name="pixelFormat">Specifies the format of the color data for each pixel in the image.</param>
+            <returns>Resized bitmap.</returns>
+            <example>
+            <code lang="csharp">
+            var originalBitmap = (Bitmap)Bitmap.FromFile("polar-bear.png");
+            int width = 320;
+            int height = 180;
+            var resizedBitmap = originalBitmap.ResizeCanvas(width, height);
+            </code>
+            </example>
+        </member>
         <member name="M:ADN.Drawing.BitmapExtensions.SetBackgroundColor(System.Drawing.Bitmap,System.Drawing.Color,System.Drawing.Imaging.PixelFormat)">
             <summary>
             Set background of a Bitmap.
