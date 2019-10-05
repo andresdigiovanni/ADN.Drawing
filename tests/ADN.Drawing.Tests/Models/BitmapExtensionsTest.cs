@@ -47,11 +47,11 @@ namespace ADN.Drawing.Tests
         {
             var origImg = (Bitmap)Bitmap.FromFile(Path.Combine("assets", origImgFile));
             var expectedImg = (Bitmap)Bitmap.FromFile(Path.Combine("assets", expectedImgFile));
-            var expectedBytesImg = ImageToBytes(expectedImg, ImageFormat.Jpeg);
 
             var resultImg = origImg.ResizeCanvas(width, height);
-            var resultBytesImg = ImageToBytes(resultImg, ImageFormat.Jpeg);
 
+            var expectedBytesImg = ImageToBytes(expectedImg, ImageFormat.Jpeg);
+            var resultBytesImg = ImageToBytes(resultImg, ImageFormat.Jpeg);
             Assert.Equal(expectedBytesImg, resultBytesImg);
         }
 
