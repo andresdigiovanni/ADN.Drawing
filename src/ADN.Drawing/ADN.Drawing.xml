@@ -9,11 +9,30 @@
             A static class of extension methods for <see cref="T:System.Drawing.Bitmap"/>.
             </summary>
         </member>
+        <member name="M:ADN.Drawing.BitmapExtensions.CropImage(System.Drawing.Bitmap,System.Drawing.Rectangle)">
+            <summary>
+            Crop a Bitmap.
+            </summary>
+            <param name="source">Bitmap to crop.</param>
+            <param name="section">Section to crop the bitmap.</param>
+            <returns>Croped image.</returns>
+            <example>
+            <code lang="csharp">
+            var originalBitmap = (Bitmap)Bitmap.FromFile("polar-bear.png");
+            int width = 320;
+            int height = 180;
+            int x = 200;
+            int y = 200;
+            var rectangle = new Rectangle(new Point(x, y), new Size(width, height));
+            var cropedBitmap = originalBitmap.CropImage(rectangle);
+            </code>
+            </example>
+        </member>
         <member name="M:ADN.Drawing.BitmapExtensions.Resize(System.Drawing.Bitmap,System.Int32,System.Int32,System.Drawing.Imaging.PixelFormat)">
             <summary>
             Resize a Bitmap.
             </summary>
-            <param name="bitmap">Bitmap to resize.</param>
+            <param name="source">Bitmap to resize.</param>
             <param name="width">New width.</param>
             <param name="height">New height.</param>
             <param name="pixelFormat">Specifies the format of the color data for each pixel in the image.</param>
@@ -49,7 +68,7 @@
             <summary>
             Set background of a Bitmap.
             </summary>
-            <param name="bitmap">Bitmap to change background.</param>
+            <param name="source">Bitmap to change background.</param>
             <param name="color">Background color.</param>
             <param name="pixelFormat">Specifies the format of the color data for each pixel in the image.</param>
             <returns>Bitmap with the background changed.</returns>
@@ -58,6 +77,40 @@
             var originalBitmap = (Bitmap)Bitmap.FromFile("polar-bear.png");
             var backgroundColor = Color.FromName("yellow");
             var backgroundBitmap = originalBitmap.SetBackgroundColor(backgroundColor);
+            </code>
+            </example>
+        </member>
+        <member name="M:ADN.Drawing.BitmapExtensions.ToArrayRGB(System.Drawing.Bitmap)">
+            <summary>
+            Convert a Bitmap into an array. Where the first dimension corresponds to the colors R, G and B.
+            </summary>
+            <param name="bitmap">Bitmap to transform.</param>
+            <returns>RGB array corresponding to the Bitmap.</returns>
+            <example>
+            <code lang="csharp">
+            var image = (Bitmap)Bitmap.FromFile("polar-bear.png");
+            var imageRGB = image.ToArrayRGB();
+            </code>
+            </example>
+        </member>
+        <member name="M:ADN.Drawing.BitmapExtensions.ToBitmap(System.Int32[0:,0:])">
+            <summary>
+            Convert a grayscale image array to Bitmap.
+            </summary>
+            <param name="image">Grayscale image array.</param>
+            <returns>Grayscale Bitmap.</returns>
+        </member>
+        <member name="M:ADN.Drawing.BitmapExtensions.ToBitmap(System.Int32[0:,0:,0:])">
+            <summary>
+            Convert a RGB array into a Bitmap.
+            </summary>
+            <param name="image">RGB array to transform. Where the first dimension corresponds to the color R, G and B.</param>
+            <returns>Transformed Bitmap.</returns>
+            <example>
+            <code lang="csharp">
+            var image = (Bitmap)Bitmap.FromFile("polar-bear.png");
+            var imageRGB = image.ToArrayRGB();
+            var origImage = imaRGB.ToBitmap();
             </code>
             </example>
         </member>
