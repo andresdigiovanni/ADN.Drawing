@@ -50,7 +50,7 @@
             <summary>
             Resize the canvas of a Bitmap.
             </summary>
-            <param name="bitmap">Bitmap to resize.</param>
+            <param name="source">Bitmap to resize.</param>
             <param name="width">New width.</param>
             <param name="height">New height.</param>
             <param name="pixelFormat">Specifies the format of the color data for each pixel in the image.</param>
@@ -77,40 +77,6 @@
             var originalBitmap = (Bitmap)Bitmap.FromFile("polar-bear.png");
             var backgroundColor = Color.FromName("yellow");
             var backgroundBitmap = originalBitmap.SetBackgroundColor(backgroundColor);
-            </code>
-            </example>
-        </member>
-        <member name="M:ADN.Drawing.BitmapExtensions.ToArrayRGB(System.Drawing.Bitmap)">
-            <summary>
-            Convert a Bitmap into an array. Where the first dimension corresponds to the colors R, G and B.
-            </summary>
-            <param name="bitmap">Bitmap to transform.</param>
-            <returns>RGB array corresponding to the Bitmap.</returns>
-            <example>
-            <code lang="csharp">
-            var image = (Bitmap)Bitmap.FromFile("polar-bear.png");
-            var imageRGB = image.ToArrayRGB();
-            </code>
-            </example>
-        </member>
-        <member name="M:ADN.Drawing.BitmapExtensions.ToBitmap(System.Int32[0:,0:])">
-            <summary>
-            Convert a grayscale image array to Bitmap.
-            </summary>
-            <param name="image">Grayscale image array.</param>
-            <returns>Grayscale Bitmap.</returns>
-        </member>
-        <member name="M:ADN.Drawing.BitmapExtensions.ToBitmap(System.Int32[0:,0:,0:])">
-            <summary>
-            Convert a RGB array into a Bitmap.
-            </summary>
-            <param name="image">RGB array to transform. Where the first dimension corresponds to the color R, G and B.</param>
-            <returns>Transformed Bitmap.</returns>
-            <example>
-            <code lang="csharp">
-            var image = (Bitmap)Bitmap.FromFile("polar-bear.png");
-            var imageRGB = image.ToArrayRGB();
-            var origImage = imaRGB.ToBitmap();
             </code>
             </example>
         </member>
